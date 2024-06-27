@@ -1,0 +1,17 @@
+# import = ["~/.config/alacritty/
+live_config_reload = true
+
+[window]
+opacity = 1
+padding.x = 20
+padding.y = 0
+
+[font]
+
+normal.family =      	"RobotoMono"
+bold.family =        	"RobotoMono"
+italic.family =      	"RobotoMono"
+bold_italic.family =	"RobotoMono"
+
+size = 12
+
