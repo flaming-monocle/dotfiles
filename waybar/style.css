@@ -1,91 +1,176 @@
 * {
-  font-family:
-    RobotoMono,
-    "Font Awesome 6 Free";
-  font-weight: 500;
-  font-size: 14pt;
-  color: #A7C080;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
-/* main waybar */
 window#waybar {
-  background: rgba(26, 27, 38, 0);
+    background-color: rgba(43, 48, 59, 0);
+    color: #fbf1c7;
 }
 
-/* when hovering over modules */
-tooltip {
-  background: #272E33;
-  border-radius: 5%;
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
-#workspaces button {
-  padding: 4px;
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: 0px;
+    border-radius: 0;
 }
 
-/* Sets active workspace to have a solid line on the bottom */
-#workspaces button.active {
-  border-bottom: 2px solid #7FBBB3;
-  border-radius: 0;
-  margin-top: 2px;
-  transition: all 0.5s ease-in-out;
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /* box-shadow: inset 0 -3px #ffffff; */
 }
 
-/* More workspace stuff for highlighting on hover */
-#workspaces button.focused {
-  color: #a6adc8;
-}
-
-#workspaces button.urgent {
-  color: #E67E80;
-}
-
-#workspaces button:hover {
-  background: #3C4841;
-  color: #7FBBB3;
-}
-
-/* Sets background, padding, margins, and borders for (all) modules */
-#workspaces,
-#clock,
-#window,
-#temperature,
-#cpu,
-#memory,
-#wireplumber,
-#tray,
-#battery {
-  background: rgba(26, 27, 38, 0.6);
-  padding: 0 10px;
-  border: 0;
+#custom-launcher {
+    background: #1d2021;
+    color: #fe8019;
+    font-weight: bold;
+    margin: 5px 2px 5px 2px;
+    padding: 0px 10px 0px 0px;
+    border: solid 2px #d65d0e;
+    border-radius: 16px;
 }
 
 #workspaces {
-  padding-right: 0px;
+    background: #1d2021;
+    color: #fbf1c7;
+    margin: 5px;
+    padding: 0px;
+    border: solid 2px #d65d0e;
+    border-radius: 16px;
+}
+#workspaces button {
+    padding: 0px 5px;
+    border-radius: 16px;
+}
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #b8bb26;
+    border-radius: 16px;
+}
+#workspaces button.active {
+    border: solid 2px #b8bb26;
+    border-radius: 16px;
 }
 
-/* Hide window module when not focused on window or empty workspace */
-window#waybar.empty #window {
-  padding: 0;
-  margin: 0;
-  opacity: 0;
+
+#clock {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px 5px 2px;
+    padding: 0px 10px;
+    border: solid 2px #d65d0e;
 }
 
-/* Set up rounding to make these modules look like separate pills */
-#tray {
-  border-radius: 20px;
-  margin-right: 8px;
+#battery {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 2px #d65d0e;
+}
+
+#cpu {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+
+#memory {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#disk {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#temperature {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#backlight {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#network {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#pulseaudio {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#pulseaudio.muted {
+    background-color: #fabd2f;
+    color: #282828;
 }
 
 #window {
-  border-radius: 12px;
+    background-color: #1d2021;
+    color: #fe8019;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 0px #d65d0e;
 }
 
-/* close right side of bar */
-#temperature {
-  border-radius: 12px 0 0 12px;
+
+#network {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#network.disconnected {
+    /* background-color: #cc241d; */
 }
 
-/* close left side of bar */
-#battery {
-  border-radius: 0 12px 12px 0;
+#idle_inhibitor {
+    background-color: #1d2021;
+    border: 0px solid #ffffff;
+    border-radius: 16px;
+    margin: 5px 2px;
+    padding: 0px 20px 0px 10px;
+    border: solid 1px #d65d0e;
+}
+#idle_inhibitor.activated {
+    background-color: #cc241d;
+    color: #ebdbb2;
 }
